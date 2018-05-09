@@ -1,0 +1,3 @@
+*.pyc
+saved_norm.npy
+saved_xyz.npy
