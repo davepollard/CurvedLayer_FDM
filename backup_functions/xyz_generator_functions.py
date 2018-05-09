@@ -222,7 +222,7 @@ def get_path_6(base_r, base_h):
         data = np.load(filename)
     except IOError:
         # if called directly it needs the extra dot
-        filename = '.' + filename
+        filename = '..' + filename
         data = np.load(filename)
     else:
         raise IOError("Unable to import logo NPY file")
@@ -283,7 +283,7 @@ def visualise_path(x_coord, y_coord):
     For visualising the generated pattern in 2D
     '''
     fig = plt.figure()
-    ax = fig.add_subplot(111, projection='3d')
+    ax = fig.add_subplot(111)
 
     for i, _ in enumerate(x_coord):
         x_path = x_coord[i]
