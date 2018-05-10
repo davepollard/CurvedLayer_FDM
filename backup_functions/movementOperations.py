@@ -58,10 +58,10 @@ def genQuaternion(normal):
     ang_y = 0
 
     if d_x > 0.0001:
-        ang_x = np.pi/2 * np.dot(np.array([1, 0, 0]), normal_x) / d_x
+        ang_x = np.arcsin(np.dot(np.array([1, 0, 0]), normal_x/d_x))
 
     if d_y > 0.0001:
-        ang_y = np.pi/2 * np.dot(np.array([0, 1, 0]), normal_y) / d_y
+        ang_y = np.arcsin(np.dot(np.array([0, 1, 0]), normal_y/d_y))
 
 
     ang_x += np.pi
